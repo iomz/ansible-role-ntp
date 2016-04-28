@@ -50,9 +50,9 @@ requestkey  {{ ntp_config_requestkey }}
 controlkey {{ ntp_config_controlkey }}
 {% endif %}
 
-{% if ntp_config_broadcast %}
-broadcast {{ ntp_config_broadcast }}
-{% endif %}
+{% for broadcast in ntp_config_broadcast %}
+broadcast {{ broadcast }}
+{% endfor %}
 
 {% if ntp_config_broadcastclient %}
 broadcastclient
