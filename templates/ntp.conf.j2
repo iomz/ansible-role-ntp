@@ -59,7 +59,7 @@ broadcastclient
 {% endif %}
 
 {% if ntp_config_broadcastdelay %}
-broadcastdelay
+broadcastdelay {{ broadcastdelay }}
 {% endif %}
 
 {% if ntp_config_multicastclient %}
